@@ -53,7 +53,7 @@ const HomeLayout = () => {
       <nav className='bg-base-200'>
         <div className='navbar align-element'>
           <div className='navbar-start'>
-            <Link className="hidden lg:flex btn btn-primary text-3xl items-center" to="/">DStore</Link>
+            <Link className="btn btn-ghost text-xl" to="/">DStore</Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal">
