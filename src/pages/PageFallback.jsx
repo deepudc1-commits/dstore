@@ -2,8 +2,8 @@ import React from 'react'
 
 const PageFallback = () => {
   return (
-    <div>
-      The app is loading...
+    <div className='flex justify-center h-screen items-center'>
+      <p><span className='loading loading-ring loading-lg'></span> DStore is loading...</p>
     </div>
   )
 }
