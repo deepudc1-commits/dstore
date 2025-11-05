@@ -7,4 +7,6 @@
       @apply mx-auto max-w-6xl px-8;
     }
   }
+
+  .max-width120 {max-width: 180px;}
   

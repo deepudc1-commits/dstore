@@ -11,14 +11,14 @@ const Cart = () => {
 
   if(cartTotal === 0) {
     return (
-      <div className="border-b border-base-300 pb-5">
+      <div className="border-b border-base-300 pb-5 align-element py-20">
         <h2 className="text-3xl font-medium tracking-wider capitalize">Your shopping cart is empty!</h2>
       </div>
     )
   }
 
   return (
-    <>
+    <div className='align-element py-20'>
       <div className="border-b border-base-300 pb-5">
         <h2 className="text-3xl font-medium tracking-wider capitalize">Shopping Cart</h2>
       </div>
@@ -42,7 +42,7 @@ const Cart = () => {
           
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

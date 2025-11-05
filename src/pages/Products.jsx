@@ -25,11 +25,11 @@ export const loader = (queryClient) => async({request}) => {
 
 const Products = () => {
   return (
-    <>
+    <div className='align-element py-20'>
       <Filters />
       <ProductsContainer />
       <PaginationContainer />
-    </>
+    </div>
   )
 }
 

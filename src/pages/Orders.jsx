@@ -20,19 +20,19 @@ const Orders = () => {
   
   if(pagination.total < 1) {
     return (
-      <>
+      <div className='align-element py-20'>
         <div className="border-b border-base-300 pb-5">
           <h2 className="text-3xl font-medium tracking-wider capitalize">Your Orders</h2>
         </div>
         <div className="mt-8">
           <h4 className="mb-4 capitalize">You have not made any orders yet!</h4>
         </div>
-      </>
+      </div>
     )
   }
 
   return (
-    <>
+    <div className='align-element py-20'>
       <div className="border-b border-base-300 pb-5">
         <h2 className="text-3xl font-medium tracking-wider capitalize">Your Orders</h2>
       </div>
@@ -67,7 +67,7 @@ const Orders = () => {
           </table>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

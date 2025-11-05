@@ -45,14 +45,14 @@ const Checkout = () => {
   const {itemsInCart, cartTotal, tax, shipping, grandTotal} = useSelector((state) => state.cart );
   if(itemsInCart === 0) {
     return (
-      <div className="border-b border-base-300 pb-5">
+      <div className="border-b border-base-300 pb-5 align-element py-20">
         <h2 className="text-3xl font-medium tracking-wider capitalize">There are no items in your cart</h2>
       </div>
     )
   }
 
   return (
-    <>
+    <div className='align-element py-20'>
       <div className="border-b border-base-300 pb-5">
         <h2 className="text-3xl font-medium tracking-wider capitalize">place your order</h2>
       </div>
@@ -79,7 +79,7 @@ const Checkout = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
