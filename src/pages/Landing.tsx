@@ -1,22 +1,22 @@
 import React from 'react'
 import FeaturedProducts from '../components/FeaturedProducts';
 import { Link } from 'react-router-dom';
-import bannerBgImg  from '../assets/banner-bg.jpg'
-import heroImg1  from '../assets/slide1.jpg'
-import heroImg2  from '../assets/slide2.jpg'
-import heroImg3  from '../assets/slide3.jpg'
-import catImg1  from '../assets/bed-icn.png'
-import catImg2  from '../assets/chair-icn.png'
-import catImg3  from '../assets/table-icn.png'
-import catImg4  from '../assets/sofa-icn.png'
-import catImg5  from '../assets/kids-icn.png'
-import centreImg1  from '../assets/center-img1.jpg'
-import centreImg2  from '../assets/center-img2.jpg'
+import bannerBgImg  from '../assets/banner-bg.webp'
+import heroImg1  from '../assets/slide1.webp'
+import heroImg2  from '../assets/slide2.webp'
+import heroImg3  from '../assets/slide3.webp'
+import catImg1  from '../assets/bed-icn.webp'
+import catImg2  from '../assets/chair-icn.webp'
+import catImg3  from '../assets/table-icn.webp'
+import catImg4  from '../assets/sofa-icn.webp'
+import catImg5  from '../assets/kids-icn.webp'
+import centreImg1  from '../assets/center-img1.webp'
+import centreImg2  from '../assets/center-img2.webp'
 import offerImg3  from '../assets/hero4.webp'
-import companyImg1  from '../assets/company-img1.jpg'
-import companyImg2  from '../assets/company-img2.jpg'
-import companyImg3  from '../assets/company-img3.jpg'
-import companyImg4  from '../assets/company-img4.jpg'
+import companyImg1  from '../assets/company-img1.webp'
+import companyImg2  from '../assets/company-img2.webp'
+import companyImg3  from '../assets/company-img3.webp'
+import companyImg4  from '../assets/company-img4.webp'
 import { HiArrowRight, HiOutlineArrowPath, HiOutlineShieldCheck, HiOutlineSparkles, HiOutlineTruck } from 'react-icons/hi2';
 import CarouselContainer from '../components/CarouselContainer';
 import { QueryClient } from '@tanstack/react-query';
@@ -111,31 +111,31 @@ const Landing = () => {
       <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2'>
         <li>
           <Link to={'/products?search=&category=Beds'} className='flex flex-col items-center group'>
-            <img src={catImg1} alt="Beds" className='transition duration-300 ease-out hover:-translate-y-4 mb-2' />
+            <img loading="lazy" decoding="async" src={catImg1} alt="Beds" className='transition duration-300 ease-out hover:-translate-y-4 mb-2' />
             <p className='font-semibold transition duration-300 ease-out group-hover:text-primary'>Beds</p>
           </Link>
         </li>
         <li>
           <Link to={'/products?search=&category=Chairs'} className='flex flex-col items-center group'>
-            <img src={catImg2} alt="Chairs" className='transition duration-300 ease-out hover:-translate-y-4 mb-2' />
+            <img loading="lazy" decoding="async" src={catImg2} alt="Chairs" className='transition duration-300 ease-out hover:-translate-y-4 mb-2' />
             <p className='font-semibold transition duration-300 ease-out group-hover:text-primary'>Chairs</p>
           </Link>
         </li>
         <li>
           <Link to={'/products?search=&category=Tables'} className='flex flex-col items-center group'>
-            <img src={catImg3} alt="Tables" className='transition duration-300 ease-out hover:-translate-y-4 mb-2' />
+            <img loading="lazy" decoding="async" src={catImg3} alt="Tables" className='transition duration-300 ease-out hover:-translate-y-4 mb-2' />
             <p className='font-semibold transition duration-300 ease-out group-hover:text-primary'>Tables</p>
           </Link>
         </li>
         <li>
           <Link to={'/products?search=&category=Sofas'} className='flex flex-col items-center group'>
-            <img src={catImg4} alt="Sofas" className='transition duration-300 ease-out hover:-translate-y-4 mb-2' />
+            <img loading="lazy" decoding="async" src={catImg4} alt="Sofas" className='transition duration-300 ease-out hover:-translate-y-4 mb-2' />
             <p className='font-semibold transition duration-300 ease-out group-hover:text-primary'>Sofas</p>
           </Link>
         </li>
         <li>
           <Link to={'/products?search=&category=Kids'} className='flex flex-col items-center group'>
-            <img src={catImg5} alt="Kids" className='transition duration-300 ease-out hover:-translate-y-4 mb-2' />
+            <img loading="lazy" decoding="async" src={catImg5} alt="Kids" className='transition duration-300 ease-out hover:-translate-y-4 mb-2' />
             <p className='font-semibold transition duration-300 ease-out group-hover:text-primary'>Kids</p>
           </Link>
         </li>
@@ -148,7 +148,7 @@ const Landing = () => {
       <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
         {offers.map(offer => (
           <Link key={offer.title} to={offer.url} className='group relative block overflow-hidden rounded-3xl'>
-            <img src={offer.image} alt={offer.title} className='aspect-[4/5] w-full object-cover transition duration-700 ease-out group-hover:scale-110' />
+            <img loading="lazy" decoding="async" src={offer.image} alt={offer.title} className='aspect-[4/5] w-full object-cover transition duration-700 ease-out group-hover:scale-110' />
             <div className='absolute inset-0 bg-gradient-to-t from-neutral/90 via-neutral/30 to-transparent'></div>
             <div className='absolute inset-x-0 bottom-0 p-8 text-white'>
               <span className='badge border-0 bg-white/20 text-white backdrop-blur'>{offer.tag}</span>
@@ -172,7 +172,7 @@ const Landing = () => {
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
         {brands.map(brand => (
           <Link key={brand.name} to={`/products?company=${brand.name}`} className='group relative block overflow-hidden rounded-3xl'>
-            <img src={brand.image} alt={brand.name} className='aspect-[3/4] w-full object-cover transition duration-700 ease-out group-hover:scale-110' />
+            <img loading="lazy" decoding="async" src={brand.image} alt={brand.name} className='aspect-[3/4] w-full object-cover transition duration-700 ease-out group-hover:scale-110' />
             <div className='absolute inset-0 bg-gradient-to-t from-neutral/80 via-transparent to-transparent'></div>
             <div className='absolute inset-x-0 bottom-0 flex items-center justify-between p-6 text-white'>
               <h4 className='font-display text-2xl font-semibold'>{brand.name}</h4>

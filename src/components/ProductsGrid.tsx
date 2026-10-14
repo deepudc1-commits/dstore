@@ -22,6 +22,8 @@ const ProductsGrid = ({ products }: ProductsGridProps) => {
           >
             <figure className='relative overflow-hidden bg-base-200'>
               <img
+                loading="lazy"
+                decoding="async"
                 src={image}
                 alt={title}
                 className='aspect-[4/3] w-full object-cover transition duration-700 ease-out group-hover:scale-110'

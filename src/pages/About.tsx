@@ -26,7 +26,7 @@ const About = () => {
         </div>
         <div className="relative">
           <img src={aboutImg} alt="A calm, modern bedroom" className="aspect-[4/5] w-full rounded-[2rem] object-cover shadow-2xl" />
-          <img src={aboutImg2} alt="" className="absolute -bottom-10 -left-10 hidden aspect-square w-48 rounded-3xl border-8 border-base-100 object-cover shadow-xl sm:block" />
+          <img loading="lazy" decoding="async" src={aboutImg2} alt="" className="absolute -bottom-10 -left-10 hidden aspect-square w-48 rounded-3xl border-8 border-base-100 object-cover shadow-xl sm:block" />
         </div>
       </div>
 

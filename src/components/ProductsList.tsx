@@ -18,7 +18,7 @@ const ProductsList = ({ products }: ProductsListProps) => {
           return (
             <Link key={product.id} className="group flex flex-col gap-6 rounded-3xl bg-base-100 p-5 shadow-sm ring-1 ring-base-300/60 transition duration-300 hover:shadow-xl sm:flex-row sm:items-center" to={`/products/${product.id}`}>
               <div className="overflow-hidden rounded-2xl">
-                <img src={image} alt={title} className="h-40 w-full object-cover transition duration-500 group-hover:scale-110 sm:h-32 sm:w-44" />
+                <img loading="lazy" decoding="async" src={image} alt={title} className="h-40 w-full object-cover transition duration-500 group-hover:scale-110 sm:h-32 sm:w-44" />
               </div>
               <div className="flex-1">
                 <p className="text-xs font-semibold uppercase tracking-widest text-base-content/50">{company}</p>

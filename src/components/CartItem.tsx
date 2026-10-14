@@ -19,7 +19,7 @@ const CartItem = ({cartItems}: CartItemProps) => {
             const {cartID, amount, title, image, company, price, productColor} = item;
             return (
               <article key={cartID} className="flex flex-col gap-6 py-6 sm:flex-row sm:items-center">
-                <img src={image} alt={title} className="h-28 w-28 shrink-0 rounded-2xl object-cover" />
+                <img loading="lazy" decoding="async" src={image} alt={title} className="h-28 w-28 shrink-0 rounded-2xl object-cover" />
                 <div className="flex-1">
                   <p className="text-xs font-semibold uppercase tracking-widest text-base-content/50">{company}</p>
                   <h3 className="mt-1 font-display text-lg font-semibold capitalize">{title}</h3>
