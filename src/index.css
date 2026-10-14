@@ -2,11 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-base-100 font-sans text-base-content antialiased;
+  }
+}
+
 @layer components {
-    .align-element {
-      @apply mx-auto max-w-6xl px-8;
-    }
+  .align-element {
+    @apply mx-auto max-w-7xl px-6 sm:px-8;
   }
 
-  .max-width120 {max-width: 180px;}
-  
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-primary;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-semibold tracking-tight sm:text-4xl;
+  }
+}
+
+.max-width120 {max-width: 180px;}
