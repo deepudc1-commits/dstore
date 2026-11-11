@@ -1,5 +1,4 @@
-import React from 'react'
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, redirect, useLoaderData } from 'react-router-dom';
 import { QueryClient, useQuery } from '@tanstack/react-query';
 import { useSelector } from 'react-redux';
 import PageHeader from '../components/PageHeader';
@@ -7,8 +6,10 @@ import { AppStore, RootState } from '../store';
 import { OrdersLoaderData } from '../types';
 import { ordersQuery } from '../queries';
 
-export const loader = (store: AppStore, queryClient: QueryClient) => async(): Promise<OrdersLoaderData> => {
-  const user = store.getState().userState.user!
+export const loader = (store: AppStore, queryClient: QueryClient) => async(): Promise<OrdersLoaderData | Response> => {
+  const user = store.getState().userState.user
+  if (!user) return redirect('/login')
+
   return queryClient.ensureQueryData(ordersQuery(user))
 }
 

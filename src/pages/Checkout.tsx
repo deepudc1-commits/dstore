@@ -1,4 +1,3 @@
-import React from 'react'
 import { ActionFunctionArgs, Form, Link, redirect } from 'react-router-dom'
 import { AxiosError } from 'axios';
 import { QueryClient } from '@tanstack/react-query';
@@ -15,7 +14,7 @@ import { ApiErrorBody } from '../types';
 export const loader = (store: AppStore) => () => {
   const userExists = store.getState().userState.user
   if(!userExists) {
-    return redirect("/")
+    return redirect("/login")
   }
   return null
 }
@@ -30,12 +29,11 @@ export const action = (store: AppStore, queryClient: QueryClient) => async({requ
   const info = {name, address, chargeTotal: grandTotal, orderTotal: formatPrice(grandTotal), numItemsInCart: itemsInCart, cartItems}
 
   try {
-    const response = await customFetch.post("/orders", {data: info}, {
+    await customFetch.post("/orders", {data: info}, {
       headers: {
         Authorization: `Bearer ${token}`
       }
     });
-    console.log(response);
     store.dispatch(clearCart());
     queryClient.invalidateQueries({ queryKey: ['orders'] })
     toast.success("Your order has been taken!")

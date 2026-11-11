@@ -1,4 +1,3 @@
-import React from 'react'
 import { useSelector } from 'react-redux'
 import { HiArrowRight, HiOutlineShoppingBag } from 'react-icons/hi2'
 import CartItem from '../components/CartItem';
@@ -10,7 +9,6 @@ import { RootState } from '../store';
 const Cart = () => {
   const user= useSelector((state: RootState) => state.userState.user)
   const {cartItems, cartTotal, itemsInCart} = useSelector((state: RootState) => state.cart )
-  console.log(cartItems);
 
   if(cartTotal === 0) {
     return (

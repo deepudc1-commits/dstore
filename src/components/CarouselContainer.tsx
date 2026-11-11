@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi2'
 
 type CarouselContainerProps = {

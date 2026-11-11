@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link, NavLink, Outlet, useNavigate, useNavigation } from 'react-router-dom'
 import {BsCart3} from 'react-icons/bs'
 import { HiMiniBars3BottomLeft } from 'react-icons/hi2'

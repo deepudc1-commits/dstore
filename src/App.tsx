@@ -1,4 +1,3 @@
-import React from 'react'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import HomeLayout from './pages/HomeLayout'
 import Error from './pages/Error'

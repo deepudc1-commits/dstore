@@ -1,4 +1,3 @@
-import React from 'react'
 import FeaturedProducts from '../components/FeaturedProducts';
 import { Link } from 'react-router-dom';
 import bannerBgImg  from '../assets/banner-bg.webp'
@@ -24,8 +23,13 @@ import { LandingLoaderData } from '../types';
 import { featuredProductsQuery } from '../queries';
 
 export const loader = (queryClient: QueryClient) => async(): Promise<LandingLoaderData> => {
-  const products = await queryClient.ensureQueryData(featuredProductsQuery)
-  return {products}
+  try {
+    const products = await queryClient.ensureQueryData(featuredProductsQuery)
+    return { products }
+  } catch (error) {
+    console.log('Error fetching featured products:', error)
+    return { products: [] }
+  }
 }
 
 const perks = [

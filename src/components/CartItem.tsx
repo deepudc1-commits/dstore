@@ -1,4 +1,3 @@
-import React from 'react'
 import { HiOutlineTrash } from 'react-icons/hi2'
 import { formatPrice } from '../utils';
 import { useDispatch } from 'react-redux';

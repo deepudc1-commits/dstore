@@ -1,4 +1,3 @@
-import React from 'react'
 import { ActionFunctionArgs, Form, Link, redirect } from 'react-router-dom'
 import { AxiosError } from 'axios'
 import { ApiErrorBody } from '../types'

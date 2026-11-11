@@ -1,4 +1,3 @@
-import React from 'react'
 import Filters from '../components/Filters'
 import PaginationContainer from '../components/PaginationContainer'
 import ProductsContainer from '../components/ProductsContainer'
@@ -10,7 +9,6 @@ import { productsQuery } from '../queries'
 
 export const loader = (queryClient: QueryClient) => async({request}: LoaderFunctionArgs): Promise<ProductsLoaderData> => {
   const tempParams = new URL(request.url).searchParams.entries();
-  console.log(tempParams);
   
   const params = Object.fromEntries([...tempParams]);
   

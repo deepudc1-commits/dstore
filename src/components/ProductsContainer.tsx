@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import ProductsGrid from './ProductsGrid'
 import ProductsList from './ProductsList'
 import { BsFillGridFill, BsList } from "react-icons/bs";

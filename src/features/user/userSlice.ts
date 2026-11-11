@@ -21,7 +21,6 @@ const userSlice = createSlice({
             localStorage.setItem("user", JSON.stringify(jwtUser))
         },
         logoutUser: (state) => {
-            console.log('Logout user');
             state.user = null
             localStorage.clear()
         }

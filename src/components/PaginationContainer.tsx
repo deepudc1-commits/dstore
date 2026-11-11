@@ -1,11 +1,9 @@
-import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi2'
 import { useProductsData } from '../queries'
 
 const PaginationContainer = () => {
   const {meta} = useProductsData()
-  console.log(meta);
   const {page, pageCount} = meta.pagination
 
   //Creating an Array to be used as numbered pagination buttons
@@ -18,10 +16,8 @@ const PaginationContainer = () => {
 
   const handleChange = (pageNum: number) => {
     const searchParams = new URLSearchParams(search)
-    console.log(searchParams);
     //Adding a query parameter named page in the URL for page number
     searchParams.set('page', String(pageNum))
-    console.log(searchParams);
     navigate(`${pathname}?${searchParams.toString()}`)
   }
 

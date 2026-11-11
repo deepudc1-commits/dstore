@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { HiArrowRight } from 'react-icons/hi2'
 import { formatPrice } from '../utils';
@@ -9,7 +8,6 @@ type ProductsListProps = {
 }
 
 const ProductsList = ({ products }: ProductsListProps) => {
-  console.log(products);
   return (
     <div>
       <div className='mt-12 grid gap-y-6'>

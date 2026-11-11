@@ -30,7 +30,6 @@ const cartSlice = createSlice({
     reducers: {
         addtoCart: (state, {payload}: PayloadAction<{product: CartItem}>) => {
             const {product} = payload;
-            console.log(product);
 
             const item = state.cartItems.find((i) => i.cartID === product.cartID);
             if(item) {
@@ -50,7 +49,6 @@ const cartSlice = createSlice({
         },
         editCartItem: (state, {payload}: PayloadAction<{id: string, newCount: string}>) => {
             const {id, newCount} = payload
-            console.log(id, newCount);
             state.cartItems.find(item => {
                 if(item.cartID === id) {
                     item.amount = parseInt(newCount)
@@ -69,7 +67,6 @@ const cartSlice = createSlice({
             const {id} = payload
             // Non-null assertion: the item being removed is always in the cart
             const {amount, price} = state.cartItems.find((i) => i.cartID === id)!
-            console.log(amount, price);
             const newCartItems = state.cartItems.filter(item => item.cartID !== id)
             state.cartItems = newCartItems
             state.itemsInCart -= amount

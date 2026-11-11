@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import { formatPrice } from '../utils';
 import { Link, LoaderFunctionArgs, useLoaderData, useParams } from 'react-router-dom';
 import { HiOutlineArrowPath, HiOutlineShoppingBag, HiOutlineTruck } from 'react-icons/hi2';
@@ -6,7 +6,7 @@ import { QueryClient, useQuery } from '@tanstack/react-query';
 import { CartItem, SingleProductLoaderData } from '../types';
 import { singleProductQuery } from '../queries';
 import { useDispatch } from 'react-redux';
-import { addtoCart, clearCart } from '../features/cart/cartSlice';
+import { addtoCart } from '../features/cart/cartSlice';
 
 export const loader = (queryClient: QueryClient) => async({params}: LoaderFunctionArgs): Promise<SingleProductLoaderData> => {
   const product = await queryClient.ensureQueryData(singleProductQuery(params.id))
@@ -17,7 +17,6 @@ const SingleProduct = () => {
   const { id } = useParams()
   const loaderData = useLoaderData<SingleProductLoaderData>();
   const { data: product = loaderData.product } = useQuery(singleProductQuery(id))
-  console.log(product);
 
   const dispatch = useDispatch()
 

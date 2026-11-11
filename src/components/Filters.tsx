@@ -1,4 +1,3 @@
-import React from 'react'
 import { Form, Link } from 'react-router-dom'
 import { HiMagnifyingGlass } from 'react-icons/hi2'
 import FormInput from './FormInput'
