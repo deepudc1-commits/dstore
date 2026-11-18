@@ -8,6 +8,7 @@ import { logoutUser } from '../features/user/userSlice'
 import { clearCart } from '../features/cart/cartSlice'
 import Loading from '../components/Loading'
 import { RootState } from '../store'
+import { toast } from 'react-toastify'
 
 const links = [
   { id: 1, url: '/', text: 'home' },
@@ -48,6 +49,7 @@ const HomeLayout = () => {
     dispatch(logoutUser())
     dispatch(clearCart())
     queryClient.removeQueries({ queryKey: ['orders'] })
+    toast.success('Successfully logged out!')
   }
 
   const visibleLinks = links.filter(link => !((link.url === 'checkout' || link.url === 'orders') && !user))
